@@ -1,7 +1,10 @@
 body{
     background: #9dddffff;
     margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
 }
+
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -38,6 +41,7 @@ body{
 .title{
     text-align: center;
     padding-top: 6%;
+    font-family: 'Roboto';
 }
 
 .position-form{
@@ -48,6 +52,29 @@ body{
 
 }
 
+input{
+    text-indent: 15px;
+    font-size: 100%;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+input:focus{
+    color: #69add8ff;
+    border-color: #69add8ff;
+}
+
+select{
+    font-size: 100%;
+    background: white;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+select:focus{
+    color: #69add8ff;
+    border-color: #69add8ff;
+}
 
 .style-form{
     height: 50px;
@@ -55,5 +82,51 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     width: 40%;
+}
 
+.mensagem-form{
+    position: relative;
+    width:83.5%;
+    padding-top:30px;
+    padding-bottom:120px;
+}
+/*.mensagem-form::-moz-placeholder{
+    line-height: 2.75em;
+}
+.mensagem-form::-webkit-input-placeholder{
+    line-height: 2.75em;
+}*/
+
+
+::-webkit-input-placeholder{
+    text-indent: 20px;
+}
+:-moz-placeholder{
+    text-indent: 20px;
+    /*font-size: 150%;*/
+}
+::-moz-placeholder{
+    text-indent: 20px;
+    /*font-size: 100%;*/
+}
+
+option:first{
+    color: #999;
+}
+
+.but{
+    position: relative;
+    margin-top:4%;
+    margin-bottom: 4%;
+    left: 76.7%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 130%;
+    border: none;
+    color:white;
+    border-radius: 5px;
+    background-color: #0075beff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
