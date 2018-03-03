@@ -5,30 +5,60 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <title>Tii Entrevista</title>
         <link href="css/tiientrevista.css" type="text/css" rel="stylesheet">
+        <script src="javascript/jquery-3.3.1.js" type="text/javascript"></script> 
     </head>
     <body>
-        <div class = "row">
-            <div class="box col-10">
-                <h1 class="title">Peça seu orçamento agora mesmo!</h1>
-                <form>
-                    <div class="position-form">
-                        <input class="style-form" placeholder="Nome">
-                        <input class="style-form" placeholder="E-mail">
-                    </div>
-                    <div class="position-form">
-                        <input class="style-form" placeholder="Telefone">
-                        <select class="style-form">
-                            <option value="" disable selected hidden>Escolha o serviço que deseja</option>
-                            <option>Opção 1</option>
-                            <option>Opção 2</option>
-                        </select>
-                    </div>
-                    <div class="position-form">
-                        <input class="style-form mensagem-form" placeholder="Mensagem">
-                    </div>
-                    <button class="but">Enviar</button>
+        <div class = "container">
+            <div class="caixa col-10">
+                <h1 class="titulo" id="titulo">Peça seu orçamento agora mesmo!</h1>
+                <form class="caixa-formulario">
+                    <input class="estilo-formulario" 
+                        placeholder="Nome" id="Nome"
+                        required>
+                    <input class="estilo-formulario" 
+                        placeholder="E-mail" id="email"
+                        required>
+                    <input class="estilo-formulario" 
+                        placeholder="Telefone" id="telefone"
+                        required>
+                    <select class="estilo-formulario"
+                        required>
+                        <option value="" disable selected hidden>Escolha o serviço que deseja</option>
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                    </select>
+                    <input class="estilo-formulario
+                         mensagem-formulario" 
+                         placeholder="Mensagem" id="mensagem"
+                         required>
+                    <button class="botao" id="botao-enviar">Enviar</button>
                 </form>
             </div>
         </div>
+        <script>
+            $(document).ready(function(){
+                $(".estilo-formulario").focusin(
+                    function(){
+                        $(this).addClass("clicado");
+                        //$(this).addClass("input-clicado");
+                    }
+                );
+
+                $(".estilo-formulario").focusout(
+                    function(){
+                        $(this).removeClass("clicado");
+                        //$(this).removeClass("input-clicado");
+                    }
+                );
+
+                $("button").click(
+                    function(){
+                        $(this).css("box-shadow","0 0px 0");
+                    }
+                );
+
+                      
+            })
+        </script>
     </body>
 </html>

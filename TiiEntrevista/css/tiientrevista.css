@@ -1,10 +1,9 @@
 body{
     background: #9dddffff;
-    margin: 0%;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    margin: 0;
 }
-
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -19,37 +18,34 @@ body{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-[class*="col-"] {
-    float: left;
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.box{
-    position: absolute;
-    top: 20%;
-    left: 9%;
+.caixa{
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title{
-    text-align: center;
-    padding-top: 6%;
-    font-family: 'Roboto';
+.caixa-formulario{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 50px 50px 150px 100px;
+    grid-column-gap: 4%;
+    padding: 0 5%;
+    grid-row-gap: 20px;
 }
 
-.position-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+.titulo{
+    text-align: center;
+    padding-top: 6%;
+    padding-bottom: 15px;
+    font-family: 'Roboto';
 }
 
 input{
@@ -71,32 +67,23 @@ select{
     border-radius: 5px;
 }
 
-select:focus{
+select:focus{  
     color: #69add8ff;
     border-color: #69add8ff;
 }
 
-.style-form{
+.estilo-formulario{
     height: 50px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 40%;
+    width: 100%;
 }
 
-.mensagem-form{
-    position: relative;
-    width:83.5%;
-    padding-top:30px;
-    padding-bottom:120px;
+.mensagem-formulario{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 130px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-/*.mensagem-form::-moz-placeholder{
-    line-height: 2.75em;
-}
-.mensagem-form::-webkit-input-placeholder{
-    line-height: 2.75em;
-}*/
-
 
 ::-webkit-input-placeholder{
     text-indent: 20px;
@@ -114,19 +101,43 @@ option:first{
     color: #999;
 }
 
-.but{
-    position: relative;
-    margin-top:4%;
-    margin-bottom: 4%;
-    left: 76.7%;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 130%;
+button{
     border: none;
-    color:white;
     border-radius: 5px;
-    background-color: #0075beff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.botao{
+    font-size: 130%;
+    color: white;
+    background-color: #0075beff;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left:65%;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.clicado:focus::-webkit-input-placeholder{
+    font-size: 70%;
+    transform: translateY(-20px);
+    visibility: visible !important;
+    color: #69add8ff;
+    border-color: #69add8ff;
+}
+
+.clicado:focus:-moz-placeholder{
+    font-size: 70%;
+    -o-transform: translateY(-20px);
+    visibility: visible !important;
+    color: #69add8ff;
+    border-color: #69add8ff;
+}
+
+.clicado:focus::-moz-placeholder{
+    font-size: 70%;
+    -o-transform: translateY(-20px);
+    visibility: visible !important;
+    color: #69add8ff;
+    border-color: #69add8ff;
 }
