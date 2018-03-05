@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title>Trii</title>
+        <link href="css/trii.css" type="text/css" rel="stylesheet">
+        <script src="javascript/jquery-3.3.1.js" type="text/javascript"></script> 
+        <script src="javascript/jquery.validate.js" type="text/javascript"></script> 
+        <script src="javascript/trii.js" type="text/javascript"></script> 
+    </head>
+    <body>
+        <div class = "container">
+            <div class="caixa col-10">
+                <h1 class="titulo" id="titulo">Peça seu orçamento agora mesmo!</h1>
+                <form class="caixa-formulario" action="/sucesso.html">
+                    <span class="erro-nome invisivel" id="erro-nome">
+                        Digite seu nome!
+                    </span>
+                    <input class="estilo-formulario nome" 
+                        placeholder="Nome" id="Nome campo"
+                        type="text">
+                    <span class="erro-email invisivel" id="erro-email">
+                        Digite seu E-mail!
+                    </span>
+                    <input class="estilo-formulario email" 
+                        placeholder="E-mail" id="Email campo"
+                        type="email">
+                    <span class="erro-telefone invisivel" id="erro-telefone">
+                        Digite seu Telefone!
+                    </span>
+                    <input class="estilo-formulario telefone" 
+                        placeholder="Telefone" id="Telefone campo"
+                        type="number">
+                    <span class="erro-selecionar invisivel" id="erro-selecionar">
+                        Selecione uma opção!
+                    </span>
+                    <select class="estilo-formulario selecionar" id="Selecionar campo"                        >
+                        <option value="" disable selected hidden>Escolha o serviço que deseja</option>
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                    </select>
+                    <span class="erro-mensagem invisivel" id="erro-mensagem">
+                        Digite uma mensagem!
+                    </span>
+                    <textarea class="estilo-formulario
+                         mensagem-formulario" 
+                         placeholder="Mensagem" 
+                         id="Mensagem campo"></textarea>
+                    <button class="botao sombra-botao" id="botao-enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
